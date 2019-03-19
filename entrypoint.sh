@@ -1,3 +1,3 @@
 #!/bin/bash
-python3 -m venv .
-python Main.py
+docker build -f Dockerfile -t WebApp1
+docker run 
