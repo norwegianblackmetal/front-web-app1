@@ -1,3 +1,3 @@
 #!/bin/bash
-docker build -f Dockerfile -t WebApp1
-docker run 
+docker build -f Dockerfile -t jenpy/webapp1
+docker run jenpy/webapp1
