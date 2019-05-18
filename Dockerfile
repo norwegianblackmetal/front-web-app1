@@ -1,7 +1,5 @@
-FROM Alpine
+FROM centos:latest
 LABEL maintainer = 'norwegianblackmetal'
-RUN yum install python
-COPY Main.py /var/
-COPY requirements.txt /var/
-pip install -r /var/requirements.txt
-RUN /var/Main.py
+RUN yum -y install python
+COPY . /
+#RUN pip install -r /var/requirements.txt

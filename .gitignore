@@ -1,5 +1,8 @@
 .idea/*
 pyvenv.cfg
+bin/
+lib/
+lib64
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
