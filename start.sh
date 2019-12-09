@@ -1,3 +1,2 @@
 #!/bin/bash
-docker build -t jippy:1 .
-docker run -p 5000:5000 jippy:1 --name jips python main.py
+docker run -d -p 8000:8080 --name webc webi:0.1 

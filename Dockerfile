@@ -1,5 +1,5 @@
-FROM centos:latest
+FROM tomcat:jdk8-openjdk
 LABEL maintainer = 'norwegianblackmetal'
-RUN yum -y install python
-COPY . /
-#RUN pip install -r /var/requirements.txt
+RUN mkdir -p /usr/local/tomcat/webapps/slayer/WEB-INF/classes
+COPY Calc.java /usr/local/tomcat/webapps/slayer/WEB-INF/classes
+RUN javac -cp /usr/local/tomcat/lib/servlet-api.jar /usr/local/tomcat/webapps/slayer/WEB-INF/classes/Calc.java
