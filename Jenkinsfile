@@ -8,10 +8,12 @@ node {
         }
 
         stage('create python-virtual-env'){
-            sh 'python3 -m venv venv'
-            sh 'source venv/bin/activate'
-            sh 'pip install -r requirements.txt'
-            sh 'pip install flask'
+            withEnv(["HOME=${env.WORKSPACE}"]) {
+                sh 'python3 -m venv venv'
+                sh 'source venv/bin/activate'
+                sh 'pip install -r requirements.txt'
+                sh 'pip install flask'
+            }
         }
 
         stage('run webapp') {
