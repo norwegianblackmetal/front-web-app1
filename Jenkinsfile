@@ -7,9 +7,8 @@ node {
             sh 'whoami'
         }
 
-        stage('create python-virtual-env'){
-                sh 'python3 -m venv venv'
-                sh 'source venv/bin/activate; pip install -r requirements.txt; pip install flask'
+        stage('install flask'){
+            sh 'pip install -r requirements.txt; pip install flask'
         }
 
         stage('run webapp') {
