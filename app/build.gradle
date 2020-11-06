@@ -8,12 +8,14 @@
 
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java'
     id 'application'
 }
 
 repositories {
     // Use JCenter for resolving dependencies.
     jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -26,5 +28,11 @@ dependencies {
 
 application {
     // Define the main class for the application.
-    mainClass = 'krabkrab.App'
+    mainClassName = 'krabkrab.App'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
 }
