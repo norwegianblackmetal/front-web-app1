@@ -1,4 +1,4 @@
-docker run -d --rm --name krabkrab-api \
-	-p 80:8080 \
-	krabkrab-api:0.1 
+docker run -d --rm --name gligli-api \
+	-p 8080:8080 \
+	gligli-api:0.1 
 	

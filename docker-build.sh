@@ -1,2 +1,2 @@
 gradle build
-docker build -t krabkrab-api:0.1 .
+docker build -t gligli-api:0.1 .
