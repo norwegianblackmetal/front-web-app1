@@ -1,10 +1,10 @@
-package krabkrab.app;
+package gligli.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AppApplicationTests {
+class ApiApplicationTests {
 
 	@Test
 	void contextLoads() {
