@@ -7,11 +7,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 
 @RestController
-@RequestMapping("message")
-public class MessageController {
+@RequestMapping("menu")
+public class MenuController {
     public HashMap<Integer, String> list = new HashMap<Integer, String>();
 
-    public MessageController(){
+    public MenuController(){
         list.put(1, "Olivje");
         list.put(2, "Borsh");
         list.put(3, "Kompot");
